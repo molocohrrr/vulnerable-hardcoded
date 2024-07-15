@@ -4,7 +4,7 @@ Este repositório contém exemplos de vulnerabilidades de credenciais hardcoded 
 
 ## Estrutura do Projeto
 
-vulnerable-hardcoded/
+```vulnerable-hardcoded/
 ├── README.md
 ├── config/
 │   ├── config.py
@@ -19,6 +19,7 @@ vulnerable-hardcoded/
 │   └── database.py
 └── tests/
     └── test_config.py
+```
 
 ## Exemplos de Credenciais Hardcoded
 
