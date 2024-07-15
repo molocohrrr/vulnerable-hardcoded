@@ -1,0 +1,27 @@
+name: TruffleHog Scan
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  trufflehog-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: TruffleHog OSS
+        uses: trufflesecurity/trufflehog@v3.79.0
+
+      - name: Upload TruffleHog report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: trufflehog-report
+          path: trufflehog-report.json
