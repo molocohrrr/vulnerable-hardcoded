@@ -16,17 +16,7 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
 
-      - name: Install TruffleHog
-        run: |
-          pip install truffleHog
-
       - name: Run TruffleHog
-        run: |
-          trufflehog filesystem --json . > trufflehog-report.json
-
-      - name: Upload TruffleHog report
-        if: always()
-        uses: actions/upload-artifact@v3
+        uses: trufflesecurity/trufflehog@v3.79.0
         with:
-          name: trufflehog-report
-          path: trufflehog-report.json
+          scan: "."
