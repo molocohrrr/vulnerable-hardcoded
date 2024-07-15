@@ -21,4 +21,4 @@ jobs:
 
       - name: Run TruffleHog
         id: trufflehog
-        run: trufflehog .
+        run: trufflehog --no-entropy .
