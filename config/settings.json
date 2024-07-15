@@ -1,0 +1,8 @@
+{
+    "database": {
+        "user": "admin",
+        "password": "password123"
+    },
+    "api_key": "apikey-abc-123-def",
+    "secret_key": "supersecretkey"
+}
