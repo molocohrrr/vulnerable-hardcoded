@@ -16,8 +16,12 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
 
-      - name: TruffleHog OSS
+      - name: Run TruffleHog
+        id: trufflehog
         uses: trufflesecurity/trufflehog@v3.79.0
+        with:
+          output_format: json
+          output_path: trufflehog-report.json
 
       - name: Upload TruffleHog report
         if: always()
