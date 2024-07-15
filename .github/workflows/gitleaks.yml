@@ -16,5 +16,12 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
 
-      - name: Run Gitleaks
+      - name: Run Gitleaks and capture results
+        id: gitleaks
         uses: gitleaks/gitleaks-action@v2.3.6
+
+      - name: Save Gitleaks results as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: gitleaks-results
+          path: ${{ steps.gitleaks.outputs.report_directory }}
