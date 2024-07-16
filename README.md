@@ -17,8 +17,7 @@ Este repositório contém exemplos de vulnerabilidades de credenciais hardcoded 
 │   ├── main.py
 │   ├── utils.py
 │   └── database.py
-└── tests/
-    └── test_config.py
+└.env
 ```
 
 ## Exemplos de Credenciais Hardcoded
