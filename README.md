@@ -37,3 +37,7 @@ Este repositório contém exemplos de vulnerabilidades de credenciais hardcoded 
    ```sh
    python main.py
    ```
+
+## Como Contribuir
+
+Só abrir o PR :-)
